@@ -28,7 +28,6 @@ for (int i = 0; i < t; i++)
     {
         cout<<arr[i]%x<<" ";
         arr[i]/=10;
-        x*10;
     }
     cout<<"\n";
 }
