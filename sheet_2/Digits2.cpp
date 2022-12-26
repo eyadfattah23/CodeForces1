@@ -18,6 +18,11 @@ int main(){
     for (int i = 0; i < t; i++)
     {
         cin >> n;
+        if (n == 0)
+        {
+            cout << 0;
+        }
+        
         while (n > 0)  
         {
             cout<<n % 10<< " ";
