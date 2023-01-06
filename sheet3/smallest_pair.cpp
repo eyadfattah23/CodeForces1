@@ -18,16 +18,17 @@ int main(){
     {
         unsigned int n;
         cin>>n;
-    int a[n]; int smp=10000000;
+    int a[n]; 
         for (int p = 0; p < n; p++)
         {
             cin>>a[p];
         }
-        for (int i = 0; i < n; i++)
+        int smp= a[0] +a[1] + 1 - 0;
+        for (int i = 0; i < n - 1; i++)
         {
             for (int j = i+1; j < n; j++)
             {
-                if (a[i] + a[j] + j + 1 - i - 1 < smp)
+                if (a[i] + a[j] + j - i < smp)
                 {
                     smp = a[i] + a[j] + j - i ;
                 }

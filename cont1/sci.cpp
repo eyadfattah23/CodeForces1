@@ -12,32 +12,31 @@ cout.tie(NULL);
 
 int main(){
 
-int n,num,t,fact=1;
+int n,num,counter=0;
+unsigned long long fact=1;
 cin >> n;
+if (n==0){
+    cout<<0;
+    return 0;
+}
 
 for (int i = 1; i <= n; i++)
 {
     fact = fact *i;
 }
- int binaryNum[32];
- 
-    int i = 0;
-    while (fact > 0) {
- 
-        binaryNum[i] = fact % 2;
-        fact = fact / 2;
-        i++;
-    }
-    
-int counter = 0;
-
-for (int i = 0; i < 32; i++)
+vector<int>bin;
+while (fact != 0)
 {
-    if (binaryNum[i] == '\0'){
-        counter++;
-    }
+    bin.push_back(fact%2);
+    fact /= 2;
 }
+for (int i = 0; i < bin.size(); i++)
+{
+    counter++;
+}
+
 cout<<counter;
+
 return 0;}
 
 

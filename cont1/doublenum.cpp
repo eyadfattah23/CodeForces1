@@ -17,6 +17,10 @@ fastio();
 unsigned long long n , t ;unsigned int num=0;  
 cin >> n;
 t=n;
+if (n == 0){
+    cout << 0 ; 
+    return 0;
+}
 while (t!=0)
 {
     t/=10;
