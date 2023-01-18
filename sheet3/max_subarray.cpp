@@ -1,7 +1,4 @@
-#include<iostream>
-#include<algorithm>
-#include<cstring>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 
 void fastio()
@@ -11,42 +8,44 @@ cin.tie(NULL);
 cout.tie(NULL); 
 }
 
+
 int main(){
     fastio();
-    int t ,n;
-    vector<int>v;
+    int t ,n,a;
     cin>>t;
-    for (int test = 0; test < t; test++)
-    {   
+    for (int times = 0; times < t; times++)
+    {
         cin>>n;
         int a[n];
+    long long count=0 ;
+        for (int nn = 0; nn < n; nn++)
+        {
+            cin>>a[nn];
+        }
         for (int i = 0; i < n; i++)
         {
-            cin>>a[i];
-
-        }
-        int ll=1;
-        for (int j = 0; j < n; j++)
-        {
-            v.push_back(a[j]);
-        }
-        for (int l = 0 , m=l+1 ; l < n-1 , m < n; l++,m++)
-        {
-            v.push_back(max(a[l],a[m]));
-        }
-        for (int g = 0 , gl=1 , gk=2 ; g < n ; g++)
-        {
-            /* code */
+            for (int j = i; j < n; j++)
+            {
+                for (int k = i; k <= j; k++)
+                {
+                
+                    if (a[k]<=a[k+1])
+                    {
+                        count+=1;
+                    }
+                    
+                }
+                
+            }
+            
         }
         
-        
-        
+        cout<<count/3<<endl;
     }
     
-for (int i = 0; i < v.size(); i++)
-{
-    cout<<v[i]<<" ";
-}
+    
+   
+    
 
 
 

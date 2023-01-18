@@ -1,6 +1,4 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 
 void fastio()
@@ -14,11 +12,11 @@ int main(){
 
 fastio();
 
-unsigned long long n , t ;unsigned int num=0;  
+unsigned long long n , t ;unsigned int num=0,answer =0;  
 cin >> n;
 t=n;
 if (n == 0){
-    cout << 0 ; 
+    cout <<"0" ; 
     return 0;
 }
 while (t!=0)
@@ -38,10 +36,15 @@ for (int i = 0; i < num; i++)
 {
     arr[i]=(arr[i]*2)%10;
 }
-for (int i = 0; i < num; i++)
+
+int tm=1;
+for (int i = num -1 ; i >=0; i--)
 {
-    cout<<arr[i];
+    answer += arr[i]*tm;
+    tm*=10;
 }
+cout<<answer;
+
 
 
 
