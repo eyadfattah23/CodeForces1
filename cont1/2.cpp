@@ -1,22 +1,44 @@
-#include <iostream>
-
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-
-long long x,y,z;
-cin >> x >> y >> z;
-if (z>x+y){
-    cout <<-1<<endl;
-}
-else if (x>=z)
+void fastio()
 {
-    cout <<0<<endl;
-    /* code */
-}
-else{
-    cout<<z-x<<endl;
+   ios_base::sync_with_stdio(false);
+cin.tie(NULL); 
+cout.tie(NULL); 
 }
 
-    return 0;
-}
+
+int main(){
+    fastio();
+   
+    for (int t = 0; t < 1; t++)
+    {
+        int att_n=0;
+        string days = "0101010101";
+        for (int i = 0; i < 10; i++)
+        {
+            if (days[i] == '1')
+            {
+                att_n+=1;
+            }
+            
+        }
+        if ((att_n *100/ 10) >= (50))
+        {
+            cout<<"YES"<<endl;
+            return 0;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+        
+    }
+    
+   
+    
+
+
+
+return 0;}
