@@ -8,10 +8,6 @@ using namespace std;
 void fastio()
 {
    ios_base::sync_with_stdio(false),cin.tie(nullptr),cout.tie(nullptr); 
-#ifdef ONLINE_JUDGE
-    freopen("input.txt", "r",stdin);
-    freopen("output.txt", "w",stdin);
-#endif
 }
 
 
@@ -34,7 +30,7 @@ int main(){
     eg[3] = count(all(s),'p');
     eg[4] = count(all(s),'t');
     sort(eg,eg+5);
-    cout<<eg[0];
+    cout<<*min_element(eg,eg+5);
     
 
 

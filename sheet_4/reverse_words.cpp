@@ -8,10 +8,6 @@ using namespace std;
 void fastio()
 {
    ios_base::sync_with_stdio(false),cin.tie(nullptr),cout.tie(nullptr); 
-#ifdef ONLINE_JUDGE
-    freopen("input.txt", "r",stdin);
-    freopen("output.txt", "w",stdin);
-#endif // DEBUG
 }
 string decimal_to_binary(int x){
 string binary;

@@ -8,31 +8,34 @@ cin.tie(NULL);
 cout.tie(NULL); 
 }
 
-const int MAX_CHAR = 26;
-void sortString(string &str)
-{
-    int charCount[MAX_CHAR] = {0};
-     
-    
-    for (int i=0; i<str.length(); i++)
- 
-        
-        charCount[str[i]-'a']++;   
-     
-    
-    for (int i=0;i<MAX_CHAR;i++)
-        for (int j=0;j<charCount[i];j++)
-            cout << (char)('a'+i);
-}
+
 
 int main(){
     fastio();
-   unsigned int n;
+    int n;
    cin>>n;
-   string str;
-   cin>>str;
-   sortString(str);
+   int arr[26]={0};
+   for (int i = 0; i < n; i++)
+   {
+    char c;cin >> c;
+    arr[c-'a']+=1;
+   }
+   for (int i = 0; i < 26; i++)
+   {
+    if (arr[i]!=0)
+    {
+        while (arr[i]>0)
+        {
+        cout<<(char)(i+'a');
+            arr[i]-=1;
+        }
+        
+    }
     
+   }
+   
+
+   
     
    
     
