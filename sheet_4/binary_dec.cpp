@@ -21,14 +21,15 @@ string decimal_to_binary(int x){
 int main(){
     fastio();
    int times =1;
+   cin >> times;
    for (int t = 0; t < times; t++)
    {
-    string n="1000000";
+    string n;cin >> n;
     unsigned long long num=1;
     int i=0;
     for (i = 0; i < sz(n); i++)
     {
-        if (n[i] == '0' ||n[i] == '1')
+       if (n[i] == '0' ||n[i] == '1')
         {
             continue;
         }
@@ -38,20 +39,14 @@ int main(){
             break;
         }
         
+        
     }
-    if (i==sz(n))
+    if (i==n.size())
         {
             cout<<num;
-            char nn[n.size()] = {'1'};
-            cout<<num;
-            for (int i = 0; i < n.size(); i++)
-            {
-                nn[i];
-            }
-            
-
             return 0;
         }
+        
         
     
 
