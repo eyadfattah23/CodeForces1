@@ -8,7 +8,6 @@ using namespace std;
 void fastio()
 {
    ios_base::sync_with_stdio(false),cin.tie(nullptr),cout.tie(nullptr); 
-
 }
 string decimal_to_binary(int x){
 string binary;
@@ -23,7 +22,14 @@ return binary ;
 
 
 
-
+long long sum(long long arr[],int n,int m){
+    long long sum = 0;
+    for (int i = n-1; i >= n-m; i--)
+    {
+        sum+=arr[i];
+    }
+    return sum;
+}
 
 
 
@@ -50,10 +56,17 @@ int main(){
    // cin >> times;
    for (int t = 0; t < times; t++)
    {
+   int n,m;
+   cin >> n>>m;
+   long long arr[n];
+   for (int i = 0; i < n; i++)
+   {
+    cin>>arr[i];
+   }
    
 
 
-
+    cout<<sum(arr,n,m);
 
 
 
