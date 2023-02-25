@@ -33,17 +33,27 @@ bool areSame(int arr[],
       return 0;
   return 1;
 }
+
 int main()
 {
     fastio();
     int times = 1;
-    //cin >> times;
+    cin >> times;
     for (int t = 0; t < times; t++)
     {
-        int n=2; int arr[]={10,12} ;
-            int idx_min = min_element(arr,arr+n) - arr;
-            int idx_max = max_element(arr,arr+n) - arr;
-        while (areSame(arr, n) != 1 )
+        int n;cin >> n; int arr[n];
+        for (int id = 0; id < n; id++)
+        {
+            cin>>arr[id];
+        }
+        if (areSame(arr,n) )
+        {
+            cout<<0<<endl;
+            continue;
+        }
+        
+        int idx_min=  min_element(arr,arr+n) - arr,idx_max=max_element(arr,arr+n) - arr;
+        while (areSame(arr, n) == false )
         {
             arr[idx_max]-=arr[idx_min];
             idx_min = min_element(arr,arr+n) - arr;
