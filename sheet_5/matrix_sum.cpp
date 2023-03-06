@@ -24,35 +24,6 @@ return binary ;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void print_mat(int b[],int r, int c,int a[][c]){
-for (int i = 0; i < r; i++)
-    {
-        for (int j = 0; j < c; j++)
-        {
-            b[i][j]+=a[i][j];
-            cout<<b[i][j]<<" ";
-        }
-        cout<<'\n';
-    }
-}
-
-
-
 int main(){
     fastio();
    int times =1;

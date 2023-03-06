@@ -24,29 +24,27 @@ int main(){
    // cin >> times;
    for (int t = 0; t < times; t++)
    {
-    
-
-
-    int a[] ={2,0,0,5};
-    for (int i = 4-1; i >= 0; i--)
+    int n,count=1;
+    cin >> n;int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        if (a[i] == 0)
+        cin>>arr[i];
+    }
+    sort(arr,arr+n);
+    for (int i = 0; i < n-1; i++)
+    {
+        if (arr[i] != arr[i+1])
         {
-            for (int j = i; j < 4-1; j++)
-            {
-                int tmp = a[j];
-                a[j]=a[j+1];
-                a[j+1]=tmp;
-            }
-            
+            count++;
         }
         
     }
-    for (int i = 0; i < 4; i++)
-    {
-        cout<<a[i]<<" ";
-    }
+    cout<<count;
     
+    
+
+
+
 
 
 

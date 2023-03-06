@@ -17,6 +17,14 @@ string decimal_to_binary(int x){
     reverse(all (binary));
     return binary ;
 }
+unsigned ll power(unsigned ll n, unsigned ll pow){
+    unsigned ll  r = 1;
+    for (int i = 0; i < pow; i++)
+    {
+        r*=n;      
+    }
+    return r;
+}
 
 int main(){
     fastio();
@@ -24,29 +32,19 @@ int main(){
    // cin >> times;
    for (int t = 0; t < times; t++)
    {
-    
+    unsigned ll x,res=0 ,n;cin>>x>>n;
 
-
-    int a[] ={2,0,0,5};
-    for (int i = 4-1; i >= 0; i--)
+    for (int i = 2; i <= n; i+=2)
     {
-        if (a[i] == 0)
+        if (i %2 ==0)
         {
-            for (int j = i; j < 4-1; j++)
-            {
-                int tmp = a[j];
-                a[j]=a[j+1];
-                a[j+1]=tmp;
-            }
-            
+        res += power(x,i);
         }
         
     }
-    for (int i = 0; i < 4; i++)
-    {
-        cout<<a[i]<<" ";
-    }
     
+    cout<<res;
+
 
 
 

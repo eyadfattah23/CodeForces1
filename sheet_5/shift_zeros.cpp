@@ -27,12 +27,17 @@ int main(){
     
 
 
-    int a[] ={2,0,0,5};
-    for (int i = 4-1; i >= 0; i--)
+    int n;cin>>n;
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin>>a[i];
+    }
+    for (int i = n-1; i >= 0; i--)
     {
         if (a[i] == 0)
         {
-            for (int j = i; j < 4-1; j++)
+            for (int j = i; j < n-1; j++)
             {
                 int tmp = a[j];
                 a[j]=a[j+1];
@@ -42,7 +47,7 @@ int main(){
         }
         
     }
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < n; i++)
     {
         cout<<a[i]<<" ";
     }

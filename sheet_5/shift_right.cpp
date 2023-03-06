@@ -18,22 +18,39 @@ string decimal_to_binary(int x){
     return binary ;
 }
 
-
-int print(int n){
-    for (int i = 1; i <= n; i++)
-    {
-        cout<<i<<" ";
-    }
-    
-}
 int main(){
     fastio();
    int times =1;
    // cin >> times;
    for (int t = 0; t < times; t++)
+   {int n,x;
+   cin >> n >> x;
+   int arr[n];
+   for (int i = 0; i < n; i++)
    {
-        int n;cin>>n;
-        print(n);
+    cin>>arr[i];
+   }
+   for (int j = 0; j < x; j++)
+   {
+    for (int i = n-1; i >0 ; i--)
+   {
+    int tmp = arr[i];
+    arr[i] = arr[i-1];
+    arr[i-1] = tmp;
+   }
+   }
+
+   for (int i = 0; i < n; i++)
+   {
+    cout<<arr[i]<<" ";
+   }
+   
+   
+   
+   
+   
+    
+
 
 
 
